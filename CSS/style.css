@@ -398,8 +398,9 @@ body {
   margin-left: 10px;
 }
 .img-team-icon {
-  fill: currentColor;
+  fill: #AFB1B8;
 }
+
 
 .img-team.link:hover,
 .img-team.link:focus {
@@ -645,20 +646,19 @@ body {
   display: flex;
   justify-content: space-between;
   min-width: 206px;
-  margin-left: 70px;
 }
 
-
-.footer-social {
+.footer-section .container {
   display: flex;
 }
 
-/*.container-logo {
-  display: flex;
-  flex-direction: column;
-}*/
+.container-networks {
+  box-sizing: inherit;
 
-
+}
+.container-logo:not(:last-child) {
+  margin-right: 70px;
+}
 
 .networks-footer.link {
   display: flex;
