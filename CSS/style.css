@@ -233,7 +233,6 @@ body {
 
   max-width: 1600px;
   height: 600px;
-  outline: 1px solid black;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
@@ -387,6 +386,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
   
   /*outline: 1px solid green;*/
 }
@@ -401,15 +401,12 @@ body {
   fill: #AFB1B8;
 }
 
-
 .img-team.link:hover,
-.img-team.link:focus {
- background-color:var(--accent-color);
-}
-
-.img-team-icon:hover,
-.img-team-icon:focus {
+.img-team.link:focus,
+.img-team.link:hover .img-team-icon,
+.img-team.link:focus .img-team-icon {
   fill: var(--primary-bg-color);
+  background-color: var(--accent-color);
 }
 /*button*/
 .hero-button {
@@ -444,7 +441,6 @@ body {
 
 .clients-title {
   margin-bottom: 50px;
-
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
@@ -456,7 +452,6 @@ body {
 .clients.list {
   display: flex;
   justify-content: center;
-  
 }
 
 .clients-link {
@@ -470,14 +465,12 @@ body {
   fill: #AFB1B8;
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  border-color: var(--accent-color);
-}
-
-.clients-link-icon:hover,
-.clients-link-icon:focus {
+.clients-item.list:hover .clients-link,
+.clients-item.list:focus .clients-link,
+.clients-link:hover .clients-link-icon,
+.clients-link:focus .clients-link-icon {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .clients-item.list + .clients-item.list {
@@ -531,8 +524,8 @@ body {
   margin-bottom: 4px;
 }
 
-.flex-project:hover,
-.flex-project:focus {
+.list.flex-link:hover,
+.list.flex-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -583,6 +576,9 @@ body {
 
 .address {
   font-style: normal;
+}
+.networks-footer.item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .contact-footer.item {
@@ -645,10 +641,10 @@ body {
 .social-networks.list {
   display: flex;
   justify-content: space-between;
-  min-width: 206px;
 }
 
 .footer-section .container {
+  align-items: baseline;
   display: flex;
 }
 
